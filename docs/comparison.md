@@ -1,10 +1,10 @@
 # Comparison of experiment tracking tools
 
 | Feature                              | `stdout` / `stderr` | 3D Mesh | ANSI | Git | Git Patch | Nested Config |      Storage      | System Metrics |
-| ------------------------------------ | :-----------------: | :-----: | :--: | :-: | :-------: | :-----------: | :---------------: | :------------: |
-| [Comet](https://www.comet.com)       |         ✅          |   ❌    |  ✅  | ✅  |    ✅     |      🟡       | 500 GB (Academic) |       ✅       |
-| [Neptune.ai](https://neptune.ai)     |         ✅          |   ❌    |  ❌  | ✅  |    ✅     |      ✅       | 100 GB (Academic) |       ✅       |
-| [Weights & Biases](https://wandb.ai) |         ❌          |   ❌    |  ❌  | ✅  |    ❌     |      ✅       |                   |       ✅       |
+|--------------------------------------|:-------------------:|:-------:|:----:|:---:|:---------:|:-------------:|:-----------------:|:--------------:|
+| [Comet](https://www.comet.com)       |          ✅          |    ❌    |  ✅   |  ✅  |     ✅     |      🟡       | 500 GB (Academic) |       ✅        |
+| [Neptune.ai](https://neptune.ai)     |          ✅          |    ❌    |  ❌   |  ✅  |     ✅     |       ✅       | 100 GB (Academic) |       ✅        |
+| [Weights & Biases](https://wandb.ai) |          ❌          |    ❌    |  ❌   |  ✅  |     ❌     |       ✅       |                   |       ✅        |
 
 ## Feature
 
