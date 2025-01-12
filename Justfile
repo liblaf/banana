@@ -10,3 +10,6 @@ lint-toml:
 
 lint-python:
     ruff check --fix
+
+sync:
+    uv sync --all-extras --all-groups --upgrade

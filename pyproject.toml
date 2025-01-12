@@ -5,11 +5,19 @@
 build-backend = "hatchling.build"
 requires = ["hatchling"]
 
+[dependency-groups]
+dev = ["icecream~=2.1.4"]
+
 [project]
 authors = [
   { email = "30631553+liblaf@users.noreply.github.com", name = "liblaf" },
 ]
-dependencies = []
+dependencies = [
+  "gitpython>=3.1.44",
+  "lazy-loader~=0.4",
+  "loguru>=0.7.3",
+  "pydantic-settings>=2.7.1",
+]
 description = "Add your description here"
 keywords = []
 license = "MIT"
@@ -17,6 +25,9 @@ name = "liblaf-banana"
 readme = "docs/README.md"
 requires-python = "~=3.12"
 version = "0.0.0"
+
+[project.optional-dependencies]
+comet = ["comet-ml~=3.47.6"]
 
 [project.urls]
 "Changelog" = "https://github.com/liblaf/banana/blob/main/CHANGELOG.md"
