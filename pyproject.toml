@@ -26,7 +26,7 @@ license = "MIT"
 name = "liblaf-banana"
 readme = "docs/README.md"
 requires-python = "~=3.12"
-version = "0.1.0"
+version = "0.1.1"
 
 [project.optional-dependencies]
 comet = ["comet-ml~=3.47.6"]
