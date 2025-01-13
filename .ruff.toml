@@ -3,5 +3,6 @@ extend = ".github/linters/.ruff.toml"
 target-version = "py312"
 
 [lint.flake8-import-conventions.extend-aliases]
-"banana" = "ba"
+"avocado" = "ac"
+"banana" = "bn"
 "comet_ml" = "comet"

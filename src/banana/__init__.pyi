@@ -1,21 +1,23 @@
-from . import comet, env, git, restic
+from . import comet, env, git, integration, restic
+from ._assign_if_missing import assign_if_missing
 from ._config import BaseConfig
 from ._entrypoint import entrypoint
 from ._start_time import start_time
-from .comet import CometConfig, end, start
-from .restic import ResticConfig, backup
+from .integration import Banana, Comet, Git, Integration, Restic
 
 __all__ = [
+    "Banana",
     "BaseConfig",
-    "CometConfig",
-    "ResticConfig",
-    "backup",
+    "Comet",
+    "Git",
+    "Integration",
+    "Restic",
+    "assign_if_missing",
     "comet",
-    "end",
     "entrypoint",
     "env",
     "git",
+    "integration",
     "restic",
-    "start",
     "start_time",
 ]

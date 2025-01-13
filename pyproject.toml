@@ -13,10 +13,12 @@ authors = [
   { email = "30631553+liblaf@users.noreply.github.com", name = "liblaf" },
 ]
 dependencies = [
-  "gitpython>=3.1.44",
+  "gitpython~=3.1.44",
+  "glom~=24.11.0",
   "lazy-loader~=0.4",
-  "loguru>=0.7.3",
-  "pydantic-settings>=2.7.1",
+  "liblaf-avocado~=0.1.0",
+  "loguru~=0.7.3",
+  "pydantic-settings~=2.7.1",
 ]
 description = "Add your description here"
 keywords = []

@@ -29,6 +29,15 @@ wheels = [
 ]
 
 [[package]]
+name = "boltons"
+version = "24.1.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/84/76/dfc34232b3e88634025563f52a430be0838182647c063f99569086922554/boltons-24.1.0.tar.gz", hash = "sha256:4a49b7d57ee055b83a458c8682a2a6f199d263a8aa517098bda9bab813554b87", size = 240916 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b8/96/e44606e60a0c005ac5f2a641960a93ca8f449ebdce7479f9bc4f10bead6d/boltons-24.1.0-py3-none-any.whl", hash = "sha256:a1776d47fdc387fb730fba1fe245f405ee184ee0be2fb447dd289773a84aed3b", size = 192196 },
+]
+
+[[package]]
 name = "certifi"
 version = "2024.12.14"
 source = { registry = "https://pypi.org/simple" }
@@ -164,6 +173,18 @@ wheels = [
 ]
 
 [[package]]
+name = "face"
+version = "24.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "boltons" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ac/79/2484075a8549cd64beae697a8f664dee69a5ccf3a7439ee40c8f93c1978a/face-24.0.0.tar.gz", hash = "sha256:611e29a01ac5970f0077f9c577e746d48c082588b411b33a0dd55c4d872949f6", size = 62732 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e9/47/21867c2e5fd006c8d36a560df9e32cb4f1f566b20c5dd41f5f8a2124f7de/face-24.0.0-py3-none-any.whl", hash = "sha256:0e2c17b426fa4639a4e77d1de9580f74a98f4869ba4c7c8c175b810611622cd3", size = 54742 },
+]
+
+[[package]]
 name = "gitdb"
 version = "4.0.12"
 source = { registry = "https://pypi.org/simple" }
@@ -185,6 +206,20 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/c0/89/37df0b71473153574a5cdef8f242de422a0f5d26d7a9e231e6f169b4ad14/gitpython-3.1.44.tar.gz", hash = "sha256:c87e30b26253bf5418b01b0660f818967f3c503193838337fe5e573331249269", size = 214196 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/1d/9a/4114a9057db2f1462d5c8f8390ab7383925fe1ac012eaa42402ad65c2963/GitPython-3.1.44-py3-none-any.whl", hash = "sha256:9e0e10cda9bed1ee64bc9a6de50e7e38a9c9943241cd7f585f6df3ed28011110", size = 207599 },
+]
+
+[[package]]
+name = "glom"
+version = "24.11.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "attrs" },
+    { name = "boltons" },
+    { name = "face" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/05/89/b57cfbc448189426f2e01b244fbe9226b059ef5423a9d49c1d335a1f1026/glom-24.11.0.tar.gz", hash = "sha256:4325f96759a912044af7b6c6bd0dba44ad8c1eb6038aab057329661d2021bb27", size = 195120 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9c/a2/75fd80784ec33da8d39cf885e8811a4fbc045a90db5e336b8e345e66dbb2/glom-24.11.0-py3-none-any.whl", hash = "sha256:991db7fcb4bfa9687010aa519b7b541bbe21111e70e58fdd2d7e34bbaa2c1fbd", size = 102690 },
 ]
 
 [[package]]
@@ -251,12 +286,28 @@ wheels = [
 ]
 
 [[package]]
+name = "liblaf-avocado"
+version = "0.1.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "lazy-loader" },
+    { name = "loguru" },
+    { name = "rich" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/58/1a/8c7bfe75aa12f1458cc4d0136c68e389495ed6cd5d59123128cba4f8254c/liblaf_avocado-0.1.0.tar.gz", hash = "sha256:4cab4e8341c22174c0c7e53e9695fec4645b0cf292ce146de93a42b1ae893d06", size = 13224 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/bc/ca/cfb3e7eb09b28daaace9ca05fe93c830a758113d52c978a8fa6960ca6202/liblaf_avocado-0.1.0-py3-none-any.whl", hash = "sha256:b57a73d9bd16a230f4c8c864db326ff139a45c46447ecae85335c80ddb96848f", size = 7722 },
+]
+
+[[package]]
 name = "liblaf-banana"
-version = "0.0.0"
+version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "gitpython" },
+    { name = "glom" },
     { name = "lazy-loader" },
+    { name = "liblaf-avocado" },
     { name = "loguru" },
     { name = "pydantic-settings" },
 ]
@@ -274,10 +325,12 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "comet-ml", marker = "extra == 'comet'", specifier = "~=3.47.6" },
-    { name = "gitpython", specifier = ">=3.1.44" },
+    { name = "gitpython", specifier = "~=3.1.44" },
+    { name = "glom", specifier = "~=24.11.0" },
     { name = "lazy-loader", specifier = "~=0.4" },
-    { name = "loguru", specifier = ">=0.7.3" },
-    { name = "pydantic-settings", specifier = ">=2.7.1" },
+    { name = "liblaf-avocado", specifier = "~=0.1.0" },
+    { name = "loguru", specifier = "~=0.7.3" },
+    { name = "pydantic-settings", specifier = "~=2.7.1" },
 ]
 
 [package.metadata.requires-dev]
