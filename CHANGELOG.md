@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/liblaf/banana/compare/v0.1.0...v0.1.1) (2025-01-13)
+
+
+### ✨ Features
+
+* **integration:** restructure codebase to support modular integrations ([ac02d1b](https://github.com/liblaf/banana/commit/ac02d1bad6fc99500d7b578f2005377755b39ab2))
+
 ## 0.1.0 (2025-01-12)
 
 
